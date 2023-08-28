@@ -1,0 +1,74 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --phone-width: 375px;
+    --phone-height: 667px; 
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.phone {
+    background-color: black;
+    border: 2px solid black;
+    padding: 20px;
+    border-radius: 60px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px
+}
+
+.top {
+    height: 50px;
+    
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.speaker {
+    width: 90px;
+    height: 7px;
+    background-color: rgba(211, 211, 211, 0.808);
+
+    border-radius: 10px; 
+}
+
+.display {
+    width: var(--phone-width);
+    height: var(--phone-height);
+    
+    background-color: white;
+}
+
+.bottom {
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    background-color: black;
+    border: 2px inset gray;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+
+.content {
+
+}
