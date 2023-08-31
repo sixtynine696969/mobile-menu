@@ -1,4 +1,6 @@
 import './style.css';
+import burgerMenuImage1 from './images/burger-bar.png';
+import burgerMenuImage2 from './images/menu-bar.png';
 
 const menu = document.querySelector('.menu');
 const display = document.querySelector('.display');
@@ -9,14 +11,18 @@ const menuButtons = document.querySelectorAll('.menu button');
 function hideMenu() {
   menu.style.display = 'none';
   display.style.gridTemplateColumns = '';
+
+  burgerMenuButton.src = burgerMenuImage1;
 }
 
 function showMenu() {
   menu.style.display = 'flex';
   display.style.gridTemplateColumns = 'calc(var(--phone-width) / 2.5) calc(var(--phone-width) - 10px)';
+
+  burgerMenuButton.src = burgerMenuImage2;
 }
 
-burgerMenuButton.addEventListener('click', (e) => {
+burgerMenuButton.addEventListener('click', () => {
   const menuStyles = getComputedStyle(menu);
   if (menuStyles.display === 'none') {
     showMenu();
@@ -35,3 +41,7 @@ menuButtons.forEach((btn) => {
     hideMenu();
   });
 });
+
+(function init() {
+  hideMenu(); // initially load image for burger menu button
+}());
