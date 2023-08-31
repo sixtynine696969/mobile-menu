@@ -69,6 +69,52 @@ body {
     border-radius: 100%;
 }
 
-.content {
+.display {
+    display: grid;
+    grid-template-columns: calc(var(--phone-width) / 2) calc(var(--phone-width) - 10px);
+    grid-template-rows: 1fr;
 
+    padding: 5px;
+    column-gap: 5px;
+}
+
+.menu {
+    border: 1px solid black;
+}
+
+.visible {
+    display: grid;
+}
+
+.content {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 50px 1fr 50px;
+    gap: 5px;
+}
+
+.content > * {
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    position: relative;
+}
+
+header input {
+    position: absolute;
+    height: 100%;
+
+    left: 0px;
+}
+
+header .header-text {
+    align-self: center;
+}
+
+header {
+    display: flex;
 }
