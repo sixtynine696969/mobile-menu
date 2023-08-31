@@ -14,6 +14,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    font-family: monospace;
 }
 
 .phone {
@@ -80,10 +82,28 @@ body {
 
 .menu {
     border: 1px solid black;
+
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    gap: 5px;
 }
 
-.visible {
-    display: grid;
+.menu button {
+    font-family: monospace;
+    font-size: 1.05rem;
+    border: none;
+    background-color: white;
+    padding: 5px;
+}
+
+.menu button:hover {
+    text-decoration: underline;
+}
+
+.menu button:active {
+    background-color: black;
+    color: white;
 }
 
 .content {
